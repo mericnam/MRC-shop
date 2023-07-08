@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MRC Shop</title>
+    <link rel="icon" type="image" href="../images/MRCshoplogo.png" />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- custom css  -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  
+  <body>
+<!-- page id  -->
+<div class="pageID" id="pageID">menTrousers</div>
+<!-- navbar  -->
+<!-- navbar 1  -->
+    <header class="p-3 navbar-top">
+      <div class="container align-content-center">
+        <div class="d-flex flex-wrap align-items-center text-center justify-content-center justify-content-lg-start">
+ 
+          <ul class="nav col-12 col-lg-auto me-lg-auto justify-content-center gap-3 ">
+            <li><a href="#" class="text-white"><i class="fa-solid fa-phone nav-top-left me-2" style="color: #ffffff;"></i>+90 000 000 00 00</a></li>
+            <li><a href="#" class="text-white"><i class="fa-solid fa-envelope nav-top-left me-2" style="color: #ffffff;"></i>mericnam@gmail.com</a></li>
+          </ul>
+ 
+          <ul class="d-flex flex-row gap-4 justify-content-center align-self-center mt-auto mb-auto gap-5 ">
+            <li><a href="https://github.com/mericnam"><i class="fa-brands fa-github nav-top-right" style="color: #ffffff;"></i></a></li>
+            <li><a href="https://www.instagram.com/meric_nam/"><i class="fa-brands fa-instagram nav-top-right" style="color: #ffffff;"></i></a></li>
+            <li><a href="https://twitter.com/MericNam"><i class="fa-brands fa-twitter nav-top-right" style="color: #ffffff;"></i></a></li>
+          </ul> 
+
+        </div>
+      </div>
+    </header>
+<!-- navbar 1 end -->
+   
+<!-- navbar 2 -->
+<nav class="navbar navbar-expand-lg container align-content-between">     
+
+  <a href="../index.html" class="navbar-brand text-black"><img src="../images/MRCshoplogo.png" class="logo" alt="MRC shop logo"></a>
+
+    <ul class="d-flex flex-row ms-auto">
+      <li class="nav-item px-2  py-3">              
+        <a href="#" class="nav-link text-black"><i class="fa-solid fa-user" style="color: #000000;"></i> <span class=" d-none d-md-inline mx-1">Account</span></a>
+      </li>
+
+      <li class="nav-item px-2  py-3">             
+        <a href="#" class="nav-link text-black">  <i class="fa-solid fa-star" style="color: #000000;"></i> <span class=" d-none d-md-inline mx-1">Wishlist</span></a>
+      </li>
+
+      <li class="nav-item px-2  py-3">
+        <a href="../otherPages/checkout.html" class="nav-link text-black"><i class="fa-solid fa-credit-card" style="color: #000000;"></i><span class=" d-none d-md-inline mx-1">Checkout</span> </a>
+      </li>
+
+      <li class="nav-item px-2  py-3">
+        <a  onclick="cartClick()"  href="#" class="nav-link text-black"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i><span class=" d-none d-md-inline mx-1">Cart</span> </a>
+        <div id="cartList" class="cartList">
+          <p class="p-3">items in cart : </p>
+          <ul class="itemsInCart p-3" id="itemsInCart"></ul>
+          <hr>
+          <p class="p-1 pt-0 m-0 text-center">total amount : <span class="amountInCart" id="amountInCart">0 $</span></p>
+          <button id="checkout" class="w-100 p-1"><a href="../otherPages/checkout.html"><i class="fa-solid fa-credit-card" style="color: #000000;"></i> Checkout</a></button>
+        </div>
+      </li>
+
+      <li class="nav-item px-2  py-3">
+        <a href="../otherPages/login.html" class="nav-link text-black"><i class="fa-solid fa-right-to-bracket" style="color: #000000;"></i><span class=" d-none d-md-inline mx-1">Login </span></a>
+      </li>
+    </ul>
+
+</nav>
+<!-- navbar 2 end -->
+
+<!-- navbar end  -->
+
+<!-- general container  -->
+<div class="container align-items-baseline" style="display: flex!important; align-items: start!important; gap: 1rem;">
+ 
+  <!-- left container  -->
+  <div class="sideBackgroundColor" style="min-width: 250px; height: 100dvh ; position: sticky; top: 0;">
+
+    <ul id="filtreList">
+       <li>              
+        <ul> Women
+          <li>
+            <a href="./womenShirts.html"> <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Shirts
+          </li>
+          <li>
+            <a href="./womenTshirts.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> T-shirts
+          </li>
+          <li>
+            <a href="./womenTrousers.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Trousers
+          </li>
+          <li>
+            <a href="./womenShorts.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Shorts
+          </li>
+        </ul>
+      </li>
+    <hr>
+
+      <li>              
+        <ul> Men
+          <li>
+            <a href="./menShirts.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Shirts
+          </li>
+          <li>
+            <a href="./menTshirts.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> T-shirts
+          </li>
+          <li>
+            <a href="./menTrousers.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Trousers
+          </li>
+          <li>
+            <a href="./menShorts.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Shorts
+          </li>
+        </ul>
+      </li>
+    <hr>
+      <li>              
+        <ul> Accessory
+          <li>
+            <a href="./Necklace.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Necklace
+          </li>
+          <li>
+            <a href="./Watch.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Watch
+          </li>
+          <li>
+            <a href="./Ring.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Ring
+          </li>
+          <li>
+            <a href="./Painting.html"><i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a> Painting
+          </li>
+        </ul>
+      </li>
+     
+    </ul>
+
+    <hr>
+    <hr>
+   
+  </div>
+  <!-- left container end  -->
+  
+  <!-- right container -->
+  
+       <section class="py-0">
+        <div >
+          <div class="title text-center py-5">
+            <h2 class="position-relative d-inline-block">Men Trousers</h2>
+            </div>
+  
+            <div class="row m-0 p-0">
+
+            <div class="col-md-4 item-card">
+              <div class="position-relative overflow-hidden w-100">
+
+                <div id="carpusel-men-trousers-1" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carpusel-men-trousers-1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carpusel-men-trousers-1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carpusel-men-trousers-1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active ">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-1-1.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item ">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-1-2.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item ">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-1-3.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+              </div>              
+  
+            </div>
+              </div>
+              <div class="text-center">
+                <p class="text-capitalize fs-4 mt-3 mb-1">Black Trouser</p>
+                <span class="fw-bold d-block  fs-5" style="text-decoration: line-through!important;">$ 45.00</span>
+                <span class="fw-bold d-block  fs-5">$ 30.00</span>
+
+                <a class="btn btn-outline-dark mx-1 my-3" onclick="addItemToStorage(14)">Add to Cart</a>
+                <a class="btn btn-outline-dark mx-1" onclick="changeProductID(14)">Details</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 item-card">
+              <div class="position-relative overflow-hidden w-100">
+
+                <div id="carpusel-men-trousers-2" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carpusel-men-trousers-2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carpusel-men-trousers-2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carpusel-men-trousers-2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-2-1.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-2-2.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-2-3.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+              </div>              
+  
+            </div>
+
+
+
+              </div>
+             
+              <div class="text-center">
+                <p class="text-capitalize fs-4 mt-3 mb-1">Black Jean Trouser</p>
+                <span class="fw-bold d-block  fs-5" style="text-decoration: line-through!important;">$ 60.00</span>
+                <span class="fw-bold d-block  fs-5">$ 40.00</span>
+
+                <a class="btn btn-outline-dark mx-1 my-3" onclick="addItemToStorage(15)">Add to Cart</a>
+                <a class="btn btn-outline-dark mx-1" onclick="changeProductID(15)">Details</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 item-card">
+              <div class="position-relative overflow-hidden w-100">
+
+                <div id="carpusel-men-trouser-3" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carpusel-men-trouser-3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-3-1.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-3-3.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-3-2.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+              </div>              
+  
+            </div>
+
+              </div>
+             
+              <div class="text-center">
+                <p class="text-capitalize fs-4 mt-3 mb-1">Basic Jean</p>
+                <span class="fw-bold d-block  fs-5" style="text-decoration: line-through!important;">$ 75.00</span>
+                <span class="fw-bold d-block  fs-5">$ 50.00</span>
+
+                <a class="btn btn-outline-dark mx-1 my-3" onclick="addItemToStorage(16)">Add to Cart</a>
+                <a class="btn btn-outline-dark mx-1" onclick="changeProductID(16)">Details</a>
+              </div>
+            </div>
+            
+            <div class="col-md-4 item-card">
+              <div class="position-relative overflow-hidden w-100">
+
+                <div id="carpusel-men-trousers-4" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carpusel-men-trousers-4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carpusel-men-trousers-4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carpusel-men-trousers-4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-2-2.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-2-3.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-2-1.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+              </div>              
+  
+            </div>
+
+
+
+              </div>
+             
+              <div class="text-center">
+                <p class="text-capitalize fs-4 mt-3 mb-1">Black Jean Trouser</p>
+                <span class="fw-bold d-block  fs-5" style="text-decoration: line-through!important;">$ 60.00</span>
+                <span class="fw-bold d-block  fs-5">$ 40.00</span>
+
+                <a class="btn btn-outline-dark mx-1 my-3" onclick="addItemToStorage(15)">Add to Cart</a>
+                <a class="btn btn-outline-dark mx-1" onclick="changeProductID(15)">Details</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 item-card">
+              <div class="position-relative overflow-hidden w-100">
+
+                <div id="carpusel-men-trouser-5" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carpusel-men-trouser-5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-3-2.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-3-1.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-3-3.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+              </div>              
+  
+            </div>
+
+              </div>
+             
+              <div class="text-center">
+                <p class="text-capitalize fs-4 mt-3 mb-1">Basic Jean</p>
+                <span class="fw-bold d-block  fs-5" style="text-decoration: line-through!important;">$ 75.00</span>
+                <span class="fw-bold d-block  fs-5">$ 50.00</span>
+
+                <a class="btn btn-outline-dark mx-1 my-3" onclick="addItemToStorage(16)">Add to Cart</a>
+                <a class="btn btn-outline-dark mx-1" onclick="changeProductID(16)">Details</a>
+              </div>
+            </div>
+            
+            <div class="col-md-4 item-card">
+              <div class="position-relative overflow-hidden w-100">
+
+                <div id="carpusel-men-trouser-6" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carpusel-men-trouser-6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-6" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-6" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-2-3.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-2-1.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-2-2.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+              </div>              
+  
+            </div>
+
+
+
+              </div>
+             
+              <div class="text-center">
+                <p class="text-capitalize fs-4 mt-3 mb-1">Black Jean Trouser</p>
+                <span class="fw-bold d-block  fs-5" style="text-decoration: line-through!important;">$ 60.00</span>
+                <span class="fw-bold d-block  fs-5">$ 40.00</span>
+
+                <a class="btn btn-outline-dark mx-1 my-3" onclick="addItemToStorage(15)">Add to Cart</a>
+                <a class="btn btn-outline-dark mx-1" onclick="changeProductID(15)">Details</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 item-card">
+              <div class="position-relative overflow-hidden w-100">
+
+                <div id="carpusel-men-trouser-7" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carpusel-men-trouser-7" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-7" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-7" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-1-2.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-1-1.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-1-3.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+              </div>              
+  
+            </div>
+
+              </div>
+             
+              <div class="text-center">
+                <p class="text-capitalize fs-4 mt-3 mb-1">Black Trouser</p>
+                <span class="fw-bold d-block  fs-5" style="text-decoration: line-through!important;">$ 45.00</span>
+                <span class="fw-bold d-block  fs-5">$ 30.00</span>
+
+                <a class="btn btn-outline-dark mx-1 my-3" onclick="addItemToStorage(14)">Add to Cart</a>
+                <a class="btn btn-outline-dark mx-1" onclick="changeProductID(14)">Details</a>
+              </div>
+            </div>
+            
+            <div class="col-md-4 item-card">
+              <div class="position-relative overflow-hidden w-100">
+
+                <div id="carpusel-men-trouser-8" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carpusel-men-trouser-8" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-8" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carpusel-men-trouser-8" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-1-3.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-1-1.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+               
+                <div class="carousel-item">
+                  <img src="../images/erkek/pantolon/erkek-pantolon-1-2.jpg_Default-MainProductImage" class="d-block w-100 items" >
+                </div>
+              </div>              
+  
+            </div>
+
+
+
+              </div>
+             
+              <div class="text-center">
+                <p class="text-capitalize fs-4 mt-3 mb-1">Black Trouser</p>
+                <span class="fw-bold d-block  fs-5" style="text-decoration: line-through!important;">$ 45.00</span>
+                <span class="fw-bold d-block  fs-5">$ 30.00</span>
+
+                <a class="btn btn-outline-dark mx-1 my-3" onclick="addItemToStorage(14)">Add to Cart</a>
+                <a class="btn btn-outline-dark mx-1" onclick="changeProductID(14)">Details</a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+<!-- right container end -->
+
+</div>
+
+
+<!-- general container end  -->
+<!-- footer -->
+
+    <div class="container-fluid " style="background-color: var(--color1);" >
+      <footer class="container py-3 pt-5 ">
+        <div class="row text-white">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Links</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="../index.html" class="text-decoration-none text-white">
+                 <i class="fas fa-chevron-right me-1" style="color: #ffffff;"></i> Home
+               </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="../otherPages/categories.html" class="text-decoration-none text-white">
+                 <i class="fas fa-chevron-right me-1" style="color: #ffffff;"></i> Categories 
+               </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="../otherPages/aboutUs.html" class="text-decoration-none text-white">
+                 <i class="fas fa-chevron-right me-1" style="color: #ffffff;"></i> About us
+               </a>
+              </li>
+             
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Contact Us</h5>             
+              <div
+                class="d-flex justify-content-start align-items-start my-2">
+                <span class="me-3">
+                  <i class="fas fa-map-marked-alt"  style="color: #ffffff;" ></i>
+                </span>
+                <span class="text-white">
+                  Mansuroglu Mah. Izmir Turkiye
+                </span>
+              </div>
+              <div
+                class="d-flex justify-content-start align-items-start my-2 "
+              >
+                <span class="me-3">
+                  <a href="mailto:mericnam@gmail.com" class="text-white"><i class="fas fa-envelope"  style="color: #ffffff;" ></i></a></span>
+                </span>
+                <span class="fw-light"> mericnam@gmail.com </span>
+              </div>
+            <div
+              class="d-flex justify-content-start align-items-start my-2 "
+               >
+              <span class="me-3">
+                <i class="fas fa-phone-alt"  style="color: #ffffff;" ></i>
+              </span>
+              <span class="fw-light"> +90 000 000 00 00 </span>
+            </div>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h5></h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> </a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> </a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
+            </ul>
+          </div>
+    
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe our newsletter to stay informed about our promotions.</h5>
+              <p>Monthly digest of what's new from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-outline-dark btn-light" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top text-white">
+          <p>© 2023 MRC Company, All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- end of footer -->
+
+
+    <!-- bootstrap  -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"
+    ></script>
+    <!-- fontsawesome  -->
+    <script src="https://kit.fontawesome.com/61af56d064.js" crossorigin="anonymous"></script>
+    <!-- items script  -->
+    <script src="../items/items.js"></script>
+    <!-- script  -->
+    <script src="../scripts.js"></script>
+  </body>
+</html>

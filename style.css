@@ -1,0 +1,434 @@
+:root {
+  --colorBase: #00007f;
+  --color1: #44448a;
+  --color2: #000000;
+  --color3: #ffffff;
+  --color4: #a2d2ff;
+  --color5: #202b36;
+
+  --font1: "Concert One", cursive;
+
+  --fs-l : clamp(3.5rem, 12vw+1rem , 12rem);
+  --fs-m : clamp(2rem, 6vw+1rem , 6rem);
+  --fs-s : clamp(1rem, 1vw+1rem , 3rem);
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none !important;
+  transition: all 0.3s!important;
+}
+body{
+  line-height: 30px;
+  animation: fade-in 350ms forwards;
+}
+.pageID{
+  display: none;
+}
+/* scrollbar  */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+
+}
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: var(--color1);
+  height: 100%;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color4);
+}
+
+/* scrollbar end  */
+
+/* navbar section  */
+.navbar {
+  background: var(--color3) !important;
+}
+.logo{
+  width: 150px;
+}
+.navbar-top{
+  background-color: var(--color1) ;
+  min-height: 20px;
+}
+.nav-top-left{
+  font-size: 15px!important;
+}
+.nav-top-right{
+  font-size: 19px!important;
+}
+.nav-top-right-two{
+  font-size: 17px!important;
+}
+/* navbar 2  */
+.cartList{
+  display: none;
+  width: 200px;
+  min-height: 150px;
+  background-color:var(--color3);
+  border: .5px solid var(--color1);
+  right: 80px;
+  
+  border-radius: 7px;
+  flex-direction: column;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cartButton{
+  display: inline;
+  position: relative;
+  top: -25px;
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+  background-image: url(./images/MRCshoplogo.png);
+}
+.gorunur{
+  display: block;
+  position: absolute;
+  z-index: 9;
+}
+/* navbar 2 end */
+/* navbar section end */
+
+/* carousel  */
+.carousel-one {
+  height: 100vh;
+  width: 100vw;
+}
+.carousel-item {
+  transition: all 0.3s ease-in;
+}
+.carousel-item div p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30rem;
+}
+.text-one{
+  color: var(--color2)!important;
+  font-weight: 600;
+  font-size: 35px;
+  letter-spacing: .15em;
+  text-shadow:  0px 0px 5px white, 
+                0px 0px 10px white, 
+                0px 0px 15px white,
+                0px 0px 20px white,
+                0px 0px 30px white,
+                0px 0px 40px white,
+                0px 0px 55px white,
+                0px 0px 75px white;
+
+}
+/* carousel end */
+
+/* sidebar  */
+.sideBackgroundColor{
+  background-color: var(--color1);
+}
+/* sidebar end */
+
+
+/* summer season  */
+.card {
+  border: 1px solid var(--color4);
+  border-radius: 7px !important;
+}
+.card-body {
+  background-color: var(--color3);
+  border: none;
+}
+.card-image-top {
+  overflow: hidden !important;
+}
+.card-footer {
+  border: none;
+  background-color: var(--color3);
+}
+.card-border{
+  border: 2px solid var(--color1);
+}
+.moreBtn{
+  color: var(--color1)!important;
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color1);
+}
+.moreBtn:hover{
+  color: rgba(0, 0, 127,.5)!important;
+  border-bottom: 2px solid rgba(0, 0, 127,.5);
+}
+/* summer season end */
+
+/* accessory  */
+.text-access{
+  color: var(--color2)!important;
+  font-size: 40px;
+  text-align: center!important;
+  font-weight: 600;
+  text-shadow: 0px 0px 30px var(--color3);
+}
+.section-divider{
+  height: 1px;
+  width: 70%;
+  border: 1px solid var(--color1);
+}
+/* accessory end */
+
+/* footer  */
+.footer-text-color{
+  color: var(--color3)!important;
+}
+/* footer end */
+
+/* product Details  */
+.productZoom{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 250%;
+  background-color: white;
+  border-radius: 50%;
+  width: 25%;
+  aspect-ratio: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+.productContainer{
+  min-height: 110vh;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 3fr;
+  grid-template-areas:
+  "picture picture picture info"
+  "picture picture picture info"
+  "other1 other2 other3 addChart";
+}
+
+.productContainerPicture{
+  grid-area: picture;
+}
+.productContainerInfo{
+  grid-area: info;
+}
+.productContainerOtherPicture1{
+  grid-area: other1;
+}
+.productContainerOtherPicture2{
+  grid-area: other2;
+}
+.productContainerOtherPicture3{
+  grid-area: other3;
+}
+.productContainerAddcart{
+  grid-area: addChart;
+}
+/* product Details end */
+
+/* itemTypes  */
+.productSection{
+  margin-left: 300px;
+}
+.item-card{
+  width: 250px!important;
+}
+#filtreList {
+  color: white!important;
+}
+#filtreList ul{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 12px 2px;
+}
+#filtreList li{
+  font-size: 15px;
+  font-weight: 400;
+  margin: 7px 1px;
+}
+/* itemTypes end */
+
+/* checkout  */
+.checkoutContainer{
+  min-height: 100vh; 
+  background-color: #44448a; 
+  position: relative;
+}
+.checkOutList{
+  min-height: 60vh; 
+  width: 70%; 
+  background-color: #ffffff; 
+  position: absolute; 
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%,-50%);
+  box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px;
+  text-align: center;
+}
+/* checkout end */
+
+/* search part  */
+.searchContainer{
+
+}
+.searchList{
+ 
+}
+.searchItem{
+
+}
+/* search part end */
+
+/* log in  */
+.loginContainer{
+  position: relative;
+  height: 350px;
+  width: 500px;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color1);
+  box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px;
+}
+.loginContainer div {
+  margin: 35px 20px;
+  display: flex;
+  width: 350px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+}
+.loginContainer div input{
+  width: 200px;
+  background-color: transparent;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto; 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.loginContainer li{
+  width: 100%;
+}
+.btnShow{
+  width: 200px;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  color: var(--color2);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 4px;
+}
+.btnLog{
+  width: 200px;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var(--color2);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.btnLog:hover, .btnShow:hover{
+  background-color: var(--color4);
+}
+.loginContainer ::placeholder{
+  color: var(--color2);
+  text-align: center;
+}
+#signupBtn:hover{
+  background-color: var(--color5);
+  color: white;
+  border-radius: 4px;
+}
+#loginBtn:hover{
+  background-color: var(--color5);
+  color: white;
+  border-radius: 4px;
+}
+/* log in end */
+
+/* categories  */
+.categoriesContainer{
+  position: relative;
+  min-height: 350px;
+  width: 750px;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  background-color: var(--color1);
+  box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px;
+}
+.categoriesSection{
+  margin: 70px 00px;
+  height: 80%;
+  text-align: center;
+  align-items: center;
+  font-size: 20px;
+}
+/* categories  end*/
+
+
+/* 600-800 px product  */
+@media screen and (max-width: 800px){
+  .productContainer{
+    min-height: 80vh;
+    grid-template-columns: 2fr 2fr 2fr ;
+    grid-template-areas:
+    "picture picture  ""
+    "picture picture  addChart"
+    "other1 other2 other3 ";
+  }
+}
+/* 600-800 px product end */
+
+
+/* gradient background  */
+.gradient {
+  background: linear-gradient(
+    300deg,
+    var(--color1),
+    var(--color4),
+    var(--color1)
+  );
+  background-size: 350%, 300%;
+  animation: gradient 13s ease-in infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0%, 50%;
+  }
+  50% {
+    background-position: 100%, 50%;
+  }
+  100% {
+    background-position: 0%, 50%;
+  }
+}
+
+/* animation  */
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
