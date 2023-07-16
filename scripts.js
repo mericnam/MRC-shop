@@ -325,11 +325,10 @@ function changeProduct(){
 function changeProductID(ID){
   saveProductIDToSessionStorage(ID)
   if(pageId.innerText=="index"){
-    const productPage = "./items/productDetails.html";
+    window.location.href ="./items/productDetails.html";
   }else{
-    const productPage = "../items/productDetails.html";
+    window.location.href ="../items/productDetails.html";
   }
-  window.location.href = productPage ;
 }
 // productDetailst end
 
