@@ -63,9 +63,7 @@ let getNameById = (x) => {
 // getting information with id end
 
 if(pageId.innerText=="index"){
-    // it is our productPage. we will use it in our functions 
-    const productPage = "./items/productDetails.html";
-
+ 
     const cardOne = document.getElementById("cardOne");
     const cardTwo = document.getElementById("cardTwo");
     const cardThree = document.getElementById("cardThree");
@@ -91,8 +89,6 @@ if(pageId.innerText=="index"){
         cardThree.src="./images/erkek/gomlek/erkek-gomlek-1-1.jpg_Default-MainProductImage"
     });
 }else if(pageId.innerText=="login"){
-    // it is our productPage. we will use it in our functions 
-    const productPage = "../items/productDetails.html";
     const input = document.querySelectorAll("input")
 
     for(let i of input){
@@ -118,16 +114,12 @@ if(pageId.innerText=="index"){
         }
     }
 }else if(pageId.innerText=="checkout"){
-  const productPage = "../items/productDetails.html";
-
   checkIDListFromStorage();
   cartIDList.forEach(function(item) {
   });
   checkOutList.innerHTML="";
   addCartStoredIDlistToCheckout();
 }else if(pageId.innerText=="productDetails"){ 
-  const productPage = "../items/productDetails.html";
-
  productContainerOtherPicture1.addEventListener("click", ()=>{
   productPicture.style.backgroundImage = "url(" + productImages[0] + ")";
  })
@@ -332,6 +324,11 @@ function changeProduct(){
 }
 function changeProductID(ID){
   saveProductIDToSessionStorage(ID)
+  if(pageId.innerText=="index"){
+    const productPage = "./items/productDetails.html";
+  }else{
+    const productPage = "../items/productDetails.html";
+  }
   window.location.href = productPage ;
 }
 // productDetailst end
