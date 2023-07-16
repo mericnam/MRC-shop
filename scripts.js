@@ -63,6 +63,8 @@ let getNameById = (x) => {
 // getting information with id end
 
 if(pageId.innerText=="index"){
+    // it is our productPage. we will use it in our functions 
+    const productPage = "./items/productDetails.html";
 
     const cardOne = document.getElementById("cardOne");
     const cardTwo = document.getElementById("cardTwo");
@@ -89,7 +91,8 @@ if(pageId.innerText=="index"){
         cardThree.src="./images/erkek/gomlek/erkek-gomlek-1-1.jpg_Default-MainProductImage"
     });
 }else if(pageId.innerText=="login"){
-
+    // it is our productPage. we will use it in our functions 
+    const productPage = "../items/productDetails.html";
     const input = document.querySelectorAll("input")
 
     for(let i of input){
@@ -115,12 +118,15 @@ if(pageId.innerText=="index"){
         }
     }
 }else if(pageId.innerText=="checkout"){
+  const productPage = "../items/productDetails.html";
+
   checkIDListFromStorage();
   cartIDList.forEach(function(item) {
   });
   checkOutList.innerHTML="";
   addCartStoredIDlistToCheckout();
 }else if(pageId.innerText=="productDetails"){ 
+  const productPage = "../items/productDetails.html";
 
  productContainerOtherPicture1.addEventListener("click", ()=>{
   productPicture.style.backgroundImage = "url(" + productImages[0] + ")";
@@ -299,8 +305,6 @@ items.forEach(item =>{
 // items zoom in end 
 
 // productDetailst 
-// it is our productPage. we will use it in our functions 
-const productPage = "../items/productDetails.html";
 const searchPage = "./otherPages/search.html";
 function changeProduct(){
   let productID = getProductIDFromSessionStorage();
