@@ -142,16 +142,12 @@ if(pageId.innerText=="index"){
   let positionPy = e.y - productZoom.getBoundingClientRect().top;
   positionPy = Math.round(4.7 * (positionPy))
   
-  console.log(positionPx)
-
   productZoom.style.backgroundPositionX = `-${positionPx}px`;
   productZoom.style.backgroundPositionY = `-${positionPy}px`;
-
  }) 
  productPicture.addEventListener("mouseout",()=>{
   productZoom.style.opacity=0
  })
-
 }
 
 // IDList and StoredIDList part 
@@ -198,8 +194,6 @@ function addCartStoredIDlistToCart(){
 
         let x = cartIDList[i];
         symbol$.textContent= "  $";
-
-   
 
         let itemImageOne = getImageById(x);
         let y = getPriceById(x);
@@ -254,7 +248,6 @@ function addCartStoredIDlistToCheckout(){
       deletebtn.setAttribute("style", "position:relative; top:-90px; width: clamp(20px, 5vw, 50px); aspect-ratio: 1; border-radius:20px");
       li.setAttribute("style", "margin-right: 10px");
     
-
       p.innerText=y;
       li.append(itemImg);
       li.append(p);
@@ -279,6 +272,7 @@ async function refreshPageAfterWait (cartID) {
 function cartClick(){
     cartList.classList.toggle("gorunur");
     itemsInCart.innerHTML="";
+    
     addCartStoredIDlistToCart();
 }
 //  cart click end
@@ -351,8 +345,6 @@ function getProductIDFromSessionStorage() {
 
 // search part 
 function searchItem(){
-
   window.location.href = searchPage ;
-
 }
 // search part end

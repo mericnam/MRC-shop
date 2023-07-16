@@ -138,7 +138,7 @@
       
       <form class="d-flex" >
         <input class="form-control d-none d-md-flex me-2 border-black" id="search" placeholder="black top big t-shirt">
-        <button class="btn btn-outline-dark d-none d-md-flex" onclick="searchItem()">Search</button>
+        <button class="btn btn-outline-dark d-none d-md-flex">Search</button>
       </form>
 
     </div>
@@ -323,7 +323,8 @@
               <p class="text-capitalize mt-3 mb-1">spirto jean</p>
               <span class="fw-bold d-block text-decoration-line-through">$ 90.00</span>
               <span class="fw-bold d-block">$ 60.00</span>
-              <a href="#" class="btn btn-outline-dark mt-3">Details</a>
+              <a class="btn btn-outline-dark mt-3" onclick="changeProductID(4)">Details</a>
+
             </div>
           </div>
 
@@ -340,7 +341,8 @@
               <p class="text-capitalize mt-3 mb-1">basic jean</p>
               <span class="fw-bold d-block text-decoration-line-through">$ 75.00</span>
               <span class="fw-bold d-block">$ 50.00</span>
-              <a href="#" class="btn btn-outline-dark mt-3">Details</a>
+              <a class="btn btn-outline-dark mt-3" onclick="changeProductID(16)">Details</a>
+              
             </div>
           </div>
 
@@ -357,7 +359,7 @@
               <p class="text-capitalize mt-3 mb-1">angel jean</p>
               <span class="fw-bold d-block text-decoration-line-through">$ 45.00</span>
               <span class="fw-bold d-block">$ 30.00</span>
-              <a href="#" class="btn btn-outline-dark mt-3">Details</a>
+              <a class="btn btn-outline-dark mt-3" onclick="changeProductID(5)">Details</a>
             </div>
           </div>
 
@@ -374,7 +376,7 @@
               <p class="text-capitalize mt-3 mb-1">black jean trousers</p>
               <span class="fw-bold d-block text-decoration-line-through">$ 60.00</span>
               <span class="fw-bold d-block">$ 40.00</span>
-              <a href="#" class="btn btn-outline-dark mt-3">Details</a>
+              <a class="btn btn-outline-dark mt-3" onclick="changeProductID(15)">Details</a>
             </div>
           </div>
         </div>
@@ -632,6 +634,7 @@
     <!-- items data  -->
     <script src="../items/items.js"></script>
     <!-- script  -->
+    <script src="./items/items.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
