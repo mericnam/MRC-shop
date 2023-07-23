@@ -142,6 +142,7 @@ if(pageId.innerText=="index"){
   
   productZoom.style.backgroundPositionX = `-${positionPx}px`;
   productZoom.style.backgroundPositionY = `-${positionPy}px`;
+  
  }) 
  productPicture.addEventListener("mouseout",()=>{
   productZoom.style.opacity=0
@@ -331,6 +332,12 @@ function changeProductID(ID){
   }
 }
 // productDetailst end
+
+// go to page 
+function goToPage(pageURL) {
+  window.location.href = pageURL;
+}
+// go to page end
 
 // productID localstorage part 
 // setting the productID 

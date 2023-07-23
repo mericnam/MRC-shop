@@ -195,6 +195,7 @@ html {
 /* footer end */
 
 /* product Details  */
+
 .productZoom{
   background-repeat: no-repeat;
   background-position: center;
@@ -387,6 +388,28 @@ html {
 }
 /* log in end */
 
+/* left container  */
+
+#filtreList li ul li {
+  color: #ffffff;
+  text-shadow:  0px 0px 5px var(--colorBase), 
+                0px 0px 10px var(--colorBase), 
+                0px 0px 20px var(--colorBase);
+
+  transition: .3s ease-in;
+}
+#filtreList li ul li:hover {
+  
+  text-shadow:  0px 0px 5px white, 
+                0px 0px 20px white,
+                0px 0px 40px white,
+                0px 0px 75px white;
+ transition: .3s ease-in;
+}
+
+/* left container end */
+
+
 /* categories  */
 .categoriesContainer{
   position: relative;
@@ -411,12 +434,16 @@ html {
 .gradient {
   background: linear-gradient(
     300deg,
-    var(--color1),
-    var(--color4),
-    var(--color1)
+    #00007f,
+    #44448a,
+    #00ccff,
+    #ffffff,
+    #00ccff,
+    #44448a,
+    #00007f
   );
-  background-size: 350%, 300%;
-  animation: gradient 13s ease-in infinite;
+  background-size: 750%, 600%;
+  animation: gradient 18s linear infinite;
 }
 @keyframes gradient {
   0% {
