@@ -139,6 +139,9 @@ html {
 .sideBackgroundColor{
   background-color: var(--color1);
 }
+.sideBackgroundColor li{
+  cursor: pointer;
+}
 /* sidebar end */
 
 
@@ -442,7 +445,7 @@ html {
     #44448a,
     #00007f
   );
-  background-size: 750%, 600%;
+  background-size: 850%, 600%;
   animation: gradient 18s linear infinite;
 }
 @keyframes gradient {
